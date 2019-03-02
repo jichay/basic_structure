@@ -17,12 +17,19 @@ tnode * add_tnode(tnode *root, tnode *add){
 	if(root == NULL) return add;
 	while(root != NULL){
 		if(add->value > root->value){
+			if(root->gnext == NULL){
+				root->gnext = add;
+				return head;
+			}
 			root = root->gnext;
 		}else{
+			if(root->lnext == NULL){
+				root->lnext = add;
+				return head;
+			}
 			root = root->lnext;
 		}
 	}
-	
 	return head;
 }
 

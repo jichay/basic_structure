@@ -34,4 +34,10 @@ tnode * add_tnode(tnode *root, tnode *add);
  */
 void print_tree(tnode *root);
 
+/**
+ * @brief Recursive version of print_tree.
+ * @param tree tree to print.
+ */
+void print_tree_rec(tnode *root);
+
 #endif

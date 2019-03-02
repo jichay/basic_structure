@@ -5,7 +5,7 @@
 
 int main(int argc, char **argv)
 {
-	node *list = NULL;
+	/*node *list = NULL;
 	list = add_at_queu(list,create_node(42));
 	list = add_at_head(list,create_node(15));
 	list = add_at_queu(list,create_node(53));
@@ -14,11 +14,12 @@ int main(int argc, char **argv)
 	list = remove_node(list,search_node(list,15));
 	print_list_rec(list);
 	free_list(list);
-	printf("\n");
+	printf("\n");*/
 	
 	tnode *tree = NULL;
 	tree = add_tnode(tree,create_tnode(4));
 	tree = add_tnode(tree,create_tnode(3));
-	
+	tree = add_tnode(tree,create_tnode(2));
+	print_tree_rec(tree);
 	return 0;
 }
