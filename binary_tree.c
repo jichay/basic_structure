@@ -7,7 +7,7 @@ tnode * create_tnode(int val){
 	n = (tnode*)malloc(sizeof(tnode));
 	if(n == NULL) return NULL;
 	n->lnext = NULL;
-	n->gnext = NULL;
+	n->gnext =NULL;
 	n->value = val;
 	return n;
 }
@@ -31,6 +31,15 @@ tnode * add_tnode(tnode *root, tnode *add){
 		}
 	}
 	return head;
+}
+
+tnode * add_tnode_rec(tnode *root, tnode *add){
+    if (root == NULL) return add; 
+    if (add->value > root->value) 
+        root->gnext  = add_tnode_rec(root->gnext, add); 
+    else 
+        root->lnext = add_tnode_rec(root->lnext, add);    
+    return root; 
 }
 
 void print_tree_rec(tnode *root){

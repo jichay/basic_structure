@@ -17,9 +17,11 @@ int main(int argc, char **argv)
 	printf("\n");*/
 	
 	tnode *tree = NULL;
-	tree = add_tnode(tree,create_tnode(4));
+	tree = add_tnode_rec(tree,create_tnode(4));
 	tree = add_tnode(tree,create_tnode(3));
-	tree = add_tnode(tree,create_tnode(2));
+	tree = add_tnode_rec(tree,create_tnode(2));
+	tree = add_tnode(tree,create_tnode(7));
+	tree = add_tnode_rec(tree,create_tnode(6));
 	print_tree_rec(tree);
 	return 0;
 }

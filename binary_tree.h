@@ -29,6 +29,15 @@ tnode * create_tnode(int value);
 tnode * add_tnode(tnode *root, tnode *add);
 
 /**
+ * @brief Add a node, if the value is lower than the actrual node, we put it in left side otherwise in right side. 
+ * @param tree Tree where to add the new node.
+ * @param add Node to add to the tree.
+ * @return Pointer to the first node of the tree.
+ */
+tnode * add_tnode_rec(tnode *root, tnode *add);
+
+
+/**
  * @brief Print the given tree.
  * @param tree tree to print.
  */
