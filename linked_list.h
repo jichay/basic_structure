@@ -48,12 +48,12 @@ void print_list(node *list);
 void print_list_rec(node *list);
 
 /**
- * @brief Search a node with the given value(first occurence).
+ * @brief Search the node with the given value(first occurence).
  * @param list List where to search node.
  * @param searched_value Value to search in the list.
  * @return Pointer to the node found.
  */
-node * search_node(node * list, int searched_value);
+node * search_node(node *list, int searched_value);
 
 /**
  * @brief Remove a node from the given list.

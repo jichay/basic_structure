@@ -23,5 +23,17 @@ int main(int argc, char **argv)
 	tree = add_tnode(tree,create_tnode(7));
 	tree = add_tnode_rec(tree,create_tnode(6));
 	print_tree_rec(tree);
+	printf("\nRoot=%d",tree->value);
+	tnode *tmp = search_tnode(tree,3);
+	
+	printf("\n\n");
+	if(tmp == NULL){
+		printf("No value found\n");
+	}else{
+		printf("Found %d at %p\n",tmp->value,tmp);
+	}
+	printf("\nRoot=%d",tree->value);
+	print_tree_rec(tmp);
+	free_tree(tree);
 	return 0;
 }

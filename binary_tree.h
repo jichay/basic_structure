@@ -9,7 +9,7 @@ struct tnode
 {
 	int value; /*!< Value of node (can be replace by anything). */
 	struct tnode *lnext; /*!< Pointer to the next left node */
-	struct tnode *gnext; /*!< Pointer to the next right node */
+	struct tnode *rnext; /*!< Pointer to the next right node */
 };
 typedef struct tnode tnode;
 
@@ -48,5 +48,19 @@ void print_tree(tnode *root);
  * @param tree tree to print.
  */
 void print_tree_rec(tnode *root);
+
+/**
+ * @brief Search the tnode with the given value(first occurence).
+ * @param root Tree where to search tnode.
+ * @param searched_value Value to search in the tree.
+ * @return Pointer to the tnode found.
+ */
+tnode * search_tnode(tnode *root, int searched_value);
+
+/**
+ * @brief Free the entire tree.
+ * @param root Tree to free.
+ */
+void free_tree(tnode *root);
 
 #endif
