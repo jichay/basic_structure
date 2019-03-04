@@ -34,12 +34,12 @@ tnode * add_tnode(tnode *root, tnode *add){
 }
 
 tnode * add_tnode_rec(tnode *root, tnode *add){
-    if (root == NULL) return add; 
-    if (add->value > root->value) 
-        root->rnext  = add_tnode_rec(root->rnext, add); 
-    else 
-        root->lnext = add_tnode_rec(root->lnext, add);    
-    return root; 
+	if (root == NULL) return add; 
+	if (add->value > root->value) 
+		root->rnext  = add_tnode_rec(root->rnext, add); 
+	else 
+		root->lnext = add_tnode_rec(root->lnext, add);    
+	return root;
 }
 
 //TODO

@@ -2,6 +2,7 @@
 #include <assert.h>
 #include "linked_list.h"
 #include "binary_tree.h"
+#include "stack.h"
 
 int main(int argc, char **argv)
 {
@@ -16,7 +17,7 @@ int main(int argc, char **argv)
 	free_list(list);
 	printf("\n");*/
 	
-	tnode *tree = NULL;
+	/*tnode *tree = NULL;
 	tree = add_tnode_rec(tree,create_tnode(4));
 	tree = add_tnode(tree,create_tnode(3));
 	tree = add_tnode_rec(tree,create_tnode(2));
@@ -30,10 +31,19 @@ int main(int argc, char **argv)
 	if(tmp == NULL){
 		printf("No value found\n");
 	}else{
-		printf("Found %d at %p\n",tmp->value,tmp);
+		printf("Found %d at %p\n", tmp->value, tmp);
 	}
 	printf("\nRoot=%d",tree->value);
 	print_tree_rec(tmp);
-	free_tree(tree);
+	free_tree(tree);*/
+	
+	stack *s = create_stack(10);
+	push(s,5);
+	push(s,7);
+	push(s,3);
+	print_stack(s);
+	int tmp = pop(s);
+	printf("\nPopped value: %d\n", tmp);
+	print_stack(s);
 	return 0;
 }
